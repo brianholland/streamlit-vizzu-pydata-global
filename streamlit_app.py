@@ -29,6 +29,7 @@ chart.animate(
 			"yAxis": {"label": {"numberScale": "shortScaleSymbolUS"}},
 			"xAxis": {"label": {"numberScale": "shortScaleSymbolUS"}},
 			"marker": {
+                "colorPalette": '#FF0000FF #BDAF10FF #9355e8FF ',
 				"label": {
 					"numberFormat": "prefixed",
 					"maxFractionDigits": "1",

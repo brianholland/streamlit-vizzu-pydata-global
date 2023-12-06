@@ -5,7 +5,7 @@ import pandas as pd
 
 st.set_page_config(initial_sidebar_state="expanded")
 
-df = pd.read_csv("sales.csv")
+df = pd.read_csv("worldpopulation.csv")
 data = Data()
 data.add_df(df)
 
@@ -19,9 +19,9 @@ chart.animate(
         {
           # "coordSystem": "cartesian",
           # "geometry": "rectangle",
-            "x": "Revenue[$]",
+            "x": "Pop",
             "y": {"set": "Country"},
-			"label": "Revenue[$]",
+			"label": "Population",
         }
     ),
 	Style({

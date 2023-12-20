@@ -19,9 +19,9 @@ chart.animate(
         {
           # "coordSystem": "cartesian",
           # "geometry": "rectangle",
-            "x": "Pop",
-            "y": {"set": "Country"},
-			"label": "Population",
+            "x": "Pop_Medium",
+            "y": {"set": "Region"},
+			"label": "Pop_Medium",
         }
     ),
 	Style({
@@ -40,7 +40,7 @@ chart.animate(
 	})
 )
 
-st.title("Sales by country")
+st.title("Population by Region")
 
 config = {}
 if st.toggle("Order by total"):

@@ -3,7 +3,7 @@ from streamlit_vizzu import VizzuChart, Data, Config, Style
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv("sales.csv")
+df = pd.read_csv("worldpopulation.csv")
 data = Data()
 data.add_df(df)
 
@@ -14,9 +14,9 @@ chart.animate(
 	#Data.filter(f"record['Year'] == df['Year'].min()")
     Config(
         {
-            "x": "Revenue[$]",
-            "y": "Country",
-			"label": "Revenue[$]",
+            "x": "Pop_Medium",
+            "y": "Region",
+			"label": "Pop_Medium",
         }
     ),
 	Style({
@@ -36,7 +36,7 @@ chart.animate(
     delay="0"
 )
 
-st.title("Sales by country")
+st.title("Population by Region")
 
 config = {}
 if st.toggle("Order by total"):
@@ -49,7 +49,7 @@ year = st.slider(
     min_value=df["Year"].min(),
     max_value=df["Year"].max(),
     value=df["Year"].min(),
-    step=1,
+    step=5,
 )
 
 filter = Data.filter(f"record['Year'] == {year}")
